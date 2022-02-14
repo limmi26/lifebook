@@ -1,0 +1,111 @@
+tokobuku ---> pembeli ---> produk
+backend = nodemon, express, nodejs, mysql ,cors, body-parser
+frontend = reactjs, react native
+
+npm i -g nodemon
+
+DATABASE 
+========
+
+1. Nyalakan XAMPP
+2. Masuk ke dalam PHPMyAdmin
+3. Buat database: namatoko_db
+4. Atur Privileges untuk membuat User 
+5. Buat user account baru
+6. Buat nama user dan password
+7. Masuk ke database lalu membuat tabel sesuai keperluan
+
+TABEL DATABASE
+==============
+
+1. User/Pembeli
+	nama tabel : user
+	query	   : 
+		- id INT NOT NULL AUTO_INCREMENT Primary Key
+		- username VARCHAR(255) NOT NULL
+		- email VARCHAR(255) NOT NULL
+		- password VARCHAR(255) NOT NULL
+		- name VARCHAR(255) 
+		- role VARCHAR(255)
+		- created_at TIMESTAMP
+		- updated_at TIMESTAMP
+	
+2. Book/Collection/Koleksi Buku
+	nama tabel : book
+	query	   :
+		- book_id INT NOT NULL AUTO_INCREMENT Primary Key
+		- book_label VARCHAR(255) NOT NULL
+		- book_title VARCHAR(255) NOT NULL
+		- book_author VARCHAR(255) NOT NULL
+		- book_genre VARCHAR(255) 
+		- book_publisher VARCHAR(255)
+		- book_isbn VARCHAR(255)
+		- book_year VARCHAR(255)
+		- book_price INT
+		- book_stock INT
+		- created_at TIMESTAMP
+		- updated_at TIMESTAMP
+
+Kode MYSQL
+CREATE TABLE Book (
+    ID int NOT NULL AUTO_INCREMENT,
+    book_label VARCHAR(255) NOT NULL,
+    book_title VARCHAR(255) NOT NULL,
+    book_author VARCHAR(255) NOT NULL,
+    book_genre VARCHAR(255),
+    book_publisher VARCHAR(255),
+    book_isbn VARCHAR(255),
+    book_year VARCHAR(255),
+    book_price INT,
+    book_stock INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,  
+    PRIMARY KEY (ID)
+);
+
+CARA BUAT BACKEND
+1. Masuk ke folder tokobuku-backend dan buka terminal git bash di folder tersebut
+2. Membuat package.json dengan npm init -y di terminal
+3. Menginstal library untuk backend
+	npm i express mysql body-parser cors dotenv
+4. Generate gitignore file lewat gitignore generator (vs code extension), tambahkan node
+5. Buat file app.js
+6. Inisialisasi Express, Cors, bodyParser, Port dan koneksi Port serta Routing dalam app.js
+7. Jalankan app.js dengan npm start
+8. Cek di browser pada localhost:port		
+
+toko games :
+- pembeli games
+- produk games
+
+install back-end :
+- nodemon
+- express
+- cors
+- body-parser
+- mysql
+
+cara buat backend :
+- buat folder
+- buka vscode
+- npm init -y
+- packge.json muncul
+- npm i express body-parser mysql cors
+
+
+user case
+pendaftaran/profile
+login
+register
+beli buku ,pembayaran, keranjang, 3rd api
+searching
+filter buku 
+
+user story
+register
+username:reza ---> halaman profi ---> no telp
+pass: ---> upercase,uniqcase,lowercase
+email: ---> google, facebook, twitter
+
+login:---> username/email, pass
+belibuku ---> pilih buku, buka keranjang,
