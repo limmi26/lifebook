@@ -74,9 +74,9 @@ CARA BUAT BACKEND
 7. Jalankan app.js dengan npm start
 8. Cek di browser pada localhost:port		
 
-toko games :
-- pembeli games
-- produk games
+toko buku :
+- pembeli buku
+- produk buku
 
 install back-end :
 - nodemon
