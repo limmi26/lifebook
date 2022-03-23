@@ -1,5 +1,6 @@
 'use strict'
 
+const { raw } = require("mysql");
 const nodeModules = require("node-modules")
 
 /*
@@ -46,12 +47,54 @@ class Book {
         sql.query(sqlQuery, (err, res) => {
             if(err) {
                 console.log('error => /n', err);
+                result(err, null);
             } else {
-                console.log('result', res);
+                let rawData = res;
+                let books = [];
+                let book;
+                rawData.forEach(each => {
+                    book = new Book(each.book_id, each.book_label, each.book_title, each.book_author, each.book_genre, each.book_genre, each.book_publisher, each.book_isbn, each.book_year, each.book_price, each.book_stock, each.created_at, each.updated_at);
+
+                    books.push(book);
+                }),
+
+                console.log('result', books);
+                result(null, books);
             }
         })
+    }
+
+    static showBookById(id, result) {
+        /*
+         * sql connection
+         * query sql
+         * get result
+         * change to object instanse
+         * send to book controller
+         */ 
+
+        let sqlQuery = `SELECT * FROM book WHERE book_id = ${id}`;
+        sql.query(sqlQuery, (err, res) => {
+            if(err) {
+                console.log('error => /n', err);
+                result(err, null);
+            } else {
+                let rawData = res;
+                let books = [];
+                let book;
+                rawData.forEach(each => {
+                    book = new Book(each.book_id, each.book_label, each.book_title, each.book_author, each.book_genre, each.book_genre, each.book_publisher, each.book_isbn, each.book_year, each.book_price, each.book_stock, each.created_at, each.updated_at);
+
+                    books.push(book);
+                }),
+
+                console.log('result', books);
+                result(null, books);
+            }
+
+        });
     }
 }
 
 
-module.exports = { Book }
+module.exports = { Book };
