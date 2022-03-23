@@ -20,7 +20,7 @@ bookRouter.get('/', BookController.FindAllBooks);
 bookRouter.get('/:id', BookController.FindBookById);
 
 // endpoint : post by id
-bookRouter.post('/post', BookController.AddNewBook);
+bookRouter.post('/post', BookController.NewBook);
 
 
 // module export
