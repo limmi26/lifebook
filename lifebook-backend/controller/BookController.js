@@ -13,7 +13,7 @@ class BookController {
     static FindAllBooks(req, res) {
         Book.showAllBooks((err, data) => {
             if(err) {
-                console.log(`controller error`);
+                console.log(`error`);
             } else {
                 res.json({
                     title: 'API backend toko buku',
@@ -43,6 +43,36 @@ class BookController {
             }
         });
     }
+
+    static NewBook(req, res) {
+        let payload = req.body;
+        payload.book_price = +req.body.book_price;
+        payload.book_stock = +req.body.book_stock;
+
+        for (const each in payload) {
+          if (!payload[each]) {
+            payload[each] = null;
+          }
+        }
+        console.log(payload, 'ini adalah payload');
+    
+        Book.addBook(payload, (err, data) => {
+          if (err) {
+            console.log(`error`);
+          } else {
+            res.json({
+              title: 'API Backend Toko Buku',
+              message: 'Koleksi Buku',
+              status: 200,
+              data
+            });
+          }
+        });
+      }
+
+    // static UpdateBook(req, res){
+    //     res.send('halaman update buku');
+    // }
 
 }
 

@@ -94,6 +94,19 @@ class Book {
 
         });
     }
+
+    static addBook(data, result) {
+        let sqlQuery = `INSERT INTO book SET ?`;
+        sql.query(sqlQuery, data, (err, res) => {
+          if (err) {
+            console.log('ini err', err);
+            result(err, null);
+          } else {
+            console.log('ini rest');
+            result(null, true);
+          }
+        });
+    }
 }
 
 

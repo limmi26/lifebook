@@ -22,6 +22,9 @@ bookRouter.get('/:id', BookController.FindBookById);
 // endpoint : post by id
 bookRouter.post('/post', BookController.NewBook);
 
+// endpoint : update by id
+// bookRouter.put('/update/:id', BookController.UpdateBook);
+
 
 // module export
 module.exports = { bookRouter };
