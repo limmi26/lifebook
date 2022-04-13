@@ -48,60 +48,61 @@
 
     <!-- table -->
     <main>
-      <section class="update-card container">
-        <h2 class="update-card-title">Update Book</h2>
+      <section class="create-card container">
+        <h2 class="create-card-title">Create Book</h2>
 
         <div class="wrapper d-flex justify-content-center">
+
           <div class="card p-5" style="width: 500px;">
             <form action="" method="post">
               <div class="wrapper d-flex">
                 <div class="mb-3 me-2">
-                  <label for="updateCode" class="form-label">Kode Buku</label>
-                  <input type="text" class="form-control" id="updateCode" aria-describedby="emailHelp" placeholder="e.g W130422">
+                  <label for="bookCode" class="form-label">Kode Buku</label>
+                  <input type="text" class="form-control" id="bookCode" aria-describedby="emailHelp" placeholder="e.g W130422">
                 </div>
                 <div class="mb-3">
-                  <label for="updateTitle" class="form-label">Judul Buku</label>
-                  <input type="text" class="form-control" id="updateTitle" aria-describedby="emailHelp" placeholder="e.g Apa Aja">
+                  <label for="bookTitle" class="form-label">Judul Buku</label>
+                  <input type="text" class="form-control" id="bookTitle" aria-describedby="emailHelp" placeholder="e.g Apa Aja">
                 </div>
               </div>
               <div class="mb-3">
-                <label for="updateAuthor" class="form-label">Penulis Buku</label>
-                <input type="text" class="form-control" id="updateAuthor" aria-describedby="emailHelp" placeholder="e.g Siapa Aku">
+                <label for="bookAuthor" class="form-label">Penulis Buku</label>
+                <input type="text" class="form-control" id="bookAuthor" aria-describedby="emailHelp" placeholder="e.g Siapa Aku">
               </div>
 
               <div class="wrapper d-flex">
                 <div class="mb-3 me-3">
-                  <label for="updateGenre" class="form-label">Genre Buku</label>
-                  <input type="text" class="form-control" id="updateGenre" aria-describedby="emailHelp" placeholder="e.g Drama">
+                  <label for="bookGenre" class="form-label">Genre Buku</label>
+                  <input type="text" class="form-control" id="bookGenre" aria-describedby="emailHelp" placeholder="e.g Drama">
                 </div>
                 <div class="mb-3">
-                  <label for="updatePublisher" class="form-label">publisher Buku</label>
-                  <input type="text" class="form-control" id="updatePublisher" aria-describedby="emailHelp" placeholder="e.g Pustaka Indah">
-                </div>
-              </div>
-
-              <div class="wrapper d-flex">
-                <div class="mb-3 me-3">
-                  <label for="updateIsbn" class="form-label">ISBN Buku</label>
-                  <input type="text" class="form-control" id="updateIsbn" aria-describedby="emailHelp" placeholder="e.g R130422">
-                </div>
-                <div class="mb-3">
-                  <label for="updateYear" class="form-label">Tahun Terbit Buku</label>
-                  <input type="number" class="form-control" id="updateYear" aria-describedby="emailHelp" placeholder="e.g 13 April 2020">
+                  <label for="bookPublisher" class="form-label">publisher Buku</label>
+                  <input type="text" class="form-control" id="bookPublisher" aria-describedby="emailHelp" placeholder="e.g Pustaka Indah">
                 </div>
               </div>
 
               <div class="wrapper d-flex">
                 <div class="mb-3 me-3">
-                  <label for="updatePrice" class="form-label">Harga Buku</label>
-                  <input type="number" class="form-control" id="updatePrice" aria-describedby="emailHelp" placeholder="e.g 150.000">
+                  <label for="bookIsbn" class="form-label">ISBN Buku</label>
+                  <input type="text" class="form-control" id="bookIsbn" aria-describedby="emailHelp" placeholder="e.g R130422">
                 </div>
                 <div class="mb-3">
-                  <label for="updateStock" class="form-label">Stok Buku</label>
-                  <input type="number" class="form-control" id="updateStock" aria-describedby="emailHelp" placeholder="e.g 5">
+                  <label for="bookYear" class="form-label">Tahun Terbit Buku</label>
+                  <input type="number" class="form-control" id="bookYear" aria-describedby="emailHelp" placeholder="e.g 13 April 2020">
+                </div>
+              </div>
+
+              <div class="wrapper d-flex">
+                <div class="mb-3 me-3">
+                  <label for="bookPrice" class="form-label">Harga Buku</label>
+                  <input type="number" class="form-control" id="bookPrice" aria-describedby="emailHelp" placeholder="e.g 150.000">
+                </div>
+                <div class="mb-3">
+                  <label for="bookStock" class="form-label">Stok Buku</label>
+                  <input type="number" class="form-control" id="bookStock" aria-describedby="emailHelp" placeholder="e.g 5">
                 </div>
               </div>  
-              <button type="submit" class="btn btn-primary">Update</button>
+              <button type="submit" class="btn btn-primary">Create</button>
             </form>
           </div>
         </div>

@@ -28,17 +28,17 @@
           <nav id="navbar" class="navbar navbar-expand-lg">
             <ul class="navbar-nav me-auto mb-2">
               <li class="nav-item">
-                  <a class="nav-link active" href="#"><span>Home</span></a>
+                  <a class="nav-link active" href="index.html"><span>Home</span></a>
               </li>
     
               <li class="nav-item"><a class="nav-link" href="books.html">Book Collection</a></li>
 
             <!-- button -->
               <li class="nav-item">
-                <button href="register.html" type="button" class="btn btn-primary ms-5 me-5">Register</button>
+                <a href="register.html" type="button" class="btn btn-primary ms-5 me-5">Register</a>
               </li>
               <li class="nav-item">
-                <button href="login.html" type="button" class="btn btn-success">Login</button>
+                <a href="login.html" type="button" class="btn btn-success">Login</a>
 
                 </li>
             </ul>
@@ -51,15 +51,29 @@
         <section class="menu-card container">
             <h2 class="menu-card-title">Koleksi Buku</h2>
 
-            <div class="card" style="width: 18rem;">
-                <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" class="card-img-top" alt="buku">
+            <div class="wrapper  d-flex justify-content-lg-center">
+              <!-- card -->
+              <div class="card mx-2" style="width: 18rem;">
+                  <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" class="card-img-top" alt="buku">
+                  <div class="card-body">
+                    <h5 class="card-title">koleksi buku</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="books.html" class="btn btn-primary">View Book</a>
+                  </div>
+              </div>
+              <!-- card -->
+              <div class="card" style="width: 18rem;">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1198&q=80" class="card-img-top" alt="buku">
                 <div class="card-body">
                   <h5 class="card-title">koleksi buku</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="books.html" class="btn btn-primary">View Book</a>
+                  <a href="create.html" class="btn btn-primary">Create Book</a>
                 </div>
+              </div>
             </div>
+
         </section>
+
     </main>
 
     <!-- bootstap -->
